@@ -7,14 +7,27 @@ trigger:
 - main
 
 stages:
-- stage: Build
+- stage: Stage1
   jobs:
-  - job: BuildJob
+  - job: Job1
     steps:
-    - script: echo Building!
-- stage: Test
+      - script: echo stage1
+- stage: Stage2
+##########################################  
   jobs:
-  - job: TestOnWindows
-    steps:
-    - script: echo Hello, world!
-      displayName: 'Run a one-line script'
+  - deployment: VMDeploy   # name of the deployment job
+    displayName: web  # friendly name to display in the UI
+    environment:
+      name: testRH02  # environment name
+      resourceType: VirtualMachine
+      tags: vm2
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: |
+              whoami
+              cd /home/fanny0608/branchtest
+              git pull
+              git diff --name-status HEAD~1..HEAD
+            
