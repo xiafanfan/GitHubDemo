@@ -6,6 +6,10 @@
 trigger:
 - main
 
+variables: 
+- name: system.debug 
+  value: true
+
 stages:
 - stage: Stage1
   jobs:
