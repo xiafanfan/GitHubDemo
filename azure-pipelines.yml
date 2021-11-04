@@ -20,7 +20,7 @@ steps:
     parameters:
       name: Mini
       testFile: tests/miniSuite.js
-
+#test
 # stages:
 # - template: test.yml  # Template reference
 #   parameters:
