@@ -6,9 +6,6 @@
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- checkout: MyGitHubDemo
-
 resources:
   repositories:
     - repository: MyGitHubDemo
@@ -17,11 +14,12 @@ resources:
       name: xiafanfan/GitHubDemo
       ref: main
 
-# extends:
-#   template: test.yml@MyGitHubDemo
-#   parameters:
-#     name: Mini
-#     testFile: tests/miniSuite.js
+steps:
+  - checkout: MyGitHubDemo
+  - template: test.yml@MyGitHubDemo
+    parameters:
+      name: Mini
+      testFile: tests/miniSuite.js
 
 # stages:
 # - template: test.yml  # Template reference
