@@ -1,17 +1,3 @@
-parameters:
-  name: ''
-  testFile: ''
-
-stages:
-- stage: Test_${{ parameters.name }}
-  jobs:
-  - job: ${{ parameters.name }}_Windows
-    pool:
-      vmImage: windows-latest
-    steps:
-    - script: echo ${{ parameters.name }}_Windows
-  - job: ${{ parameters.name }}_Mac
-    pool:
-      vmImage: macOS-latest
-    steps:
-    - script: echo ${{ parameters.name }}_Mac
+steps:
+  - script: echo ${{ parameters.name }}_Windows
+  - script: echo ${{ parameters.name }}_Mac
