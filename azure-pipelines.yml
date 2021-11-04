@@ -17,11 +17,11 @@ resources:
       name: xiafanfan/GitHubDemo
       ref: main
 
-extends:
-  template: test.yml@MyGitHubDemo
-  parameters:
-    name: Mini
-    testFile: tests/miniSuite.js
+# extends:
+#   template: test.yml@MyGitHubDemo
+#   parameters:
+#     name: Mini
+#     testFile: tests/miniSuite.js
 
 # stages:
 # - template: test.yml  # Template reference
