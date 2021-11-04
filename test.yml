@@ -9,11 +9,9 @@ stages:
     pool:
       vmImage: windows-latest
     steps:
-    - script: npm install
-    - script: npm test -- --file=${{ parameters.testFile }}
+    - script: echo ${{ parameters.name }}_Windows
   - job: ${{ parameters.name }}_Mac
     pool:
       vmImage: macOS-latest
     steps:
-    - script: npm install
-    - script: npm test -- --file=${{ parameters.testFile }}
+    - script: echo ${{ parameters.name }}_Mac
