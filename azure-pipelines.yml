@@ -6,6 +6,9 @@
 pool:
   vmImage: ubuntu-latest
 
+steps:
+- checkout:MyGitHubDemo
+
 resources:
   repositories:
     - repository: MyGitHubDemo
