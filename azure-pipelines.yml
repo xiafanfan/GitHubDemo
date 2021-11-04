@@ -8,14 +8,14 @@ pool:
 
 resources:
   repositories:
-    - repository: GitHubDemo
+    - repository: MyGitHubDemo
       endpoint: xiafanfan1
       type: github
       name: xiafanfan/GitHubDemo
       ref: main
 
 extends:
-  template: test.yml@GitHubDemo
+  template: test.yml@MyGitHubDemo
   parameters:
     name: Mini
     testFile: tests/miniSuite.js
