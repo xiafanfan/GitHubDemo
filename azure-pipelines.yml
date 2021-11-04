@@ -9,7 +9,7 @@ pool:
 resources:
   repositories:
     - repository: MyGitHubDemo
-      endpoint: xiafanfan1
+      endpoint: xiafanfan
       type: github
       name: xiafanfan/GitHubDemo
       ref: main
